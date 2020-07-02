@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "@reach/router";
-const Pet = (props) => {
+
+const Pet = props => {
   const { name, animal, breed, media, location, id } = props;
+
   let hero = "http://placecorgi.com/300/300";
   if (media.length) {
     hero = media[0].small;
@@ -14,7 +16,7 @@ const Pet = (props) => {
       </div>
       <div className="info">
         <h1>{name}</h1>
-        <h2>{`${animal} - ${breed} - ${location}`}</h2>
+        <h2>{`${animal} — ${breed} — ${location}`}</h2>
       </div>
     </Link>
   );
